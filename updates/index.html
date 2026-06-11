@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Updates — Lumé Calabasas</title>
+<meta name="theme-color" content="#9FB089">
+<meta name="description" content="Get the newest version of your plan, early access to new planners, and VIP-only sales from Lumé Calabasas.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#FBF4EC;--sage:#9FB089;--sage-d:#7E927A;--blush:#E7B7C0;--rose:#C77E8E;--ink:#34392F;
+    --ink2:#5B6356;--sageink:#5D7256;--line:#E2E0D0;--panel:#E9EFE0;--white:#fff;}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;min-height:100%;}
+  body{font-family:'Poppins',-apple-system,sans-serif;color:var(--ink);background:var(--sage);
+    display:flex;align-items:center;justify-content:center;padding:24px 16px;min-height:100dvh;}
+  .card{max-width:440px;width:100%;background:var(--cream);border-radius:26px;border:2px solid var(--blush);
+    padding:36px 28px 30px;box-shadow:0 18px 50px rgba(52,57,47,.18);text-align:center;}
+  .brand{font-weight:600;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--sage-d);}
+  .script{font-family:'Caveat';font-size:32px;color:var(--rose);line-height:.9;margin:8px 0 2px;}
+  h1{font-family:'Fraunces';font-weight:600;font-size:30px;line-height:1.1;margin:6px 0 4px;}
+  .rule{width:60px;height:4px;background:var(--sage);border-radius:3px;margin:14px auto;}
+  .sub{color:var(--ink2);font-size:14.5px;line-height:1.55;margin:0 0 8px;}
+  .perks{list-style:none;padding:0;margin:14px 0 20px;text-align:left;display:inline-block;}
+  .perks li{font-size:14px;color:var(--ink);margin:8px 0;padding-left:26px;position:relative;}
+  .perks li::before{content:'✓';position:absolute;left:0;top:0;color:var(--sageink);font-weight:700;}
+  form{text-align:left;}
+  label{display:block;font-size:12.5px;font-weight:600;color:var(--ink2);margin:0 0 5px;}
+  input[type=text],input[type=email]{width:100%;padding:14px;font-size:16px;color:var(--ink);background:var(--white);
+    border:1.5px solid var(--line);border-radius:13px;outline:none;font-family:'Poppins';margin-bottom:13px;}
+  input:focus{border-color:var(--sage);}
+  button{width:100%;appearance:none;border:0;border-radius:14px;padding:15px;font-size:16px;font-weight:600;
+    font-family:'Poppins';background:var(--sage);color:#fff;cursor:pointer;}
+  button:disabled{background:#C7D2BC;}
+  .fine{font-size:11.5px;color:var(--ink2);margin:14px 0 0;line-height:1.5;}
+  .links{margin-top:18px;font-size:13px;}
+  .links a{color:var(--sageink);font-weight:600;text-decoration:none;}
+  .links a:hover{text-decoration:underline;}
+  .hp{position:absolute;left:-9999px;}
+  .done{display:none;}
+  .done .em{font-size:46px;}
+  .done h1{margin-top:6px;}
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <!-- FORM STATE -->
+  <div id="formState">
+    <div class="brand">Lumé Calabasas</div>
+    <div class="script">stay in the loop</div>
+    <h1>Free updates &amp; new releases</h1>
+    <div class="rule"></div>
+    <p class="sub">We refine the plan over time and add new planners &amp; trackers. Pop your email in and we'll keep you posted — that's it.</p>
+    <ul class="perks">
+      <li>The newest version of your plan, free</li>
+      <li>Early access to new planners &amp; trackers</li>
+      <li>VIP-only sales before anyone else</li>
+    </ul>
+    <form action="https://formsubmit.co/ajax/adam@clandestinenetworks.com" method="POST" id="signup">
+      <input type="hidden" name="_subject" value="New Lumé Calabasas signup 🌿">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <p class="hp"><label>Don't fill this out: <input name="_honey"></label></p>
+      <label for="fname">First name <span style="font-weight:400">(optional)</span></label>
+      <input type="text" id="fname" name="first_name" placeholder="Jordan" autocomplete="given-name">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+      <button type="submit" id="submitBtn">Keep me posted 🌿</button>
+    </form>
+    <p class="fine">No spam, ever. Unsubscribe anytime — your email is never shared or sold.</p>
+    <div class="links">
+      Already in? <a href="/web">Open the free web app →</a><br>
+      <a href="https://www.facebook.com/groups/3504271456400131" target="_blank" rel="noopener">Join the VIP Facebook group →</a>
+    </div>
+  </div>
+
+  <!-- THANK YOU STATE -->
+  <div id="doneState" class="done">
+    <div class="em">🌿</div>
+    <div class="brand">Lumé Calabasas</div>
+    <h1>You're on the list!</h1>
+    <div class="rule"></div>
+    <p class="sub">Thank you — we'll be in touch with the good stuff: updates, new releases, and VIP sales. Welcome to the community.</p>
+    <div class="links">
+      <a href="/web">Open the free web app →</a><br>
+      <a href="https://www.facebook.com/groups/3504271456400131" target="_blank" rel="noopener">Join the VIP Facebook group →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var form=document.getElementById('signup');
+  if(!form)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var btn=document.getElementById('submitBtn');
+    btn.disabled=true;btn.textContent='Joining…';
+    fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
+      .then(function(r){return r.json();})
+      .then(function(){showThanks();})
+      .catch(function(){showThanks();}); // still show success UX even if the network hiccups
+  });
+  function showThanks(){
+    document.getElementById('formState').style.display='none';
+    var d=document.getElementById('doneState');d.style.display='block';
+    window.scrollTo(0,0);
+  }
+})();
+</script>
+</body>
+</html>
