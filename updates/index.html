@@ -57,15 +57,13 @@
       <li>Early access to new planners &amp; trackers</li>
       <li>VIP-only sales before anyone else</li>
     </ul>
-    <form action="https://formsubmit.co/ajax/lumecalabasas@yahoo.com" method="POST" id="signup">
-      <input type="hidden" name="_subject" value="New Lumé Calabasas signup 🌿">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <p class="hp"><label>Don't fill this out: <input name="_honey"></label></p>
+    <form action="https://assets.mailerlite.com/jsonp/2427155/forms/190021600670647395/subscribe" method="POST" id="signup">
       <label for="fname">First name <span style="font-weight:400">(optional)</span></label>
-      <input type="text" id="fname" name="first_name" placeholder="Jordan" autocomplete="given-name">
+      <input type="text" id="fname" name="fields[name]" placeholder="Jordan" autocomplete="given-name">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="you@email.com" required autocomplete="email">
+      <input type="email" id="email" name="fields[email]" placeholder="you@email.com" required autocomplete="email">
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
       <button type="submit" id="submitBtn">Keep me posted 🌿</button>
     </form>
     <p class="fine">No spam, ever. Unsubscribe anytime — your email is never shared or sold.</p>
@@ -79,9 +77,9 @@
   <div id="doneState" class="done">
     <div class="em">🌿</div>
     <div class="brand">Lumé Calabasas</div>
-    <h1>You're on the list!</h1>
+    <h1>Almost there!</h1>
     <div class="rule"></div>
-    <p class="sub">Thank you — we'll be in touch with the good stuff: updates, new releases, and VIP sales. Welcome to the community.</p>
+    <p class="sub">Check your inbox and click the confirmation link to finish joining (peek in spam if you don't see it). Your welcome email — with your free calculator — lands right after. 🌿</p>
     <div class="links">
       <a href="/web">Open the free web app →</a><br>
       <a href="https://www.facebook.com/groups/3504271456400131" target="_blank" rel="noopener">Join the VIP Facebook group →</a>
@@ -97,10 +95,9 @@
     e.preventDefault();
     var btn=document.getElementById('submitBtn');
     btn.disabled=true;btn.textContent='Joining…';
-    fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)})
-      .then(function(r){return r.json();})
+    fetch(form.action,{method:'POST',mode:'no-cors',body:new FormData(form)})
       .then(function(){showThanks();})
-      .catch(function(){showThanks();}); // still show success UX even if the network hiccups
+      .catch(function(){showThanks();}); // MailerLite endpoint returns an opaque response; show success either way
   });
   function showThanks(){
     document.getElementById('formState').style.display='none';
