@@ -265,6 +265,7 @@ function viewToday(){
     h+='<div class="win'+(on?' on':'')+'" data-win="'+w.f+'"><div class="wck">'+(on?'✓':'')+'</div>'+
        '<div class="wt"><b>'+w.t+'</b><span>'+w.s+'</span></div></div>';});
   h+='<div class="note" style="margin-top:6px"><b>Simple: lose the weight, skip the crunch.</b> Check off what you did today — the streaks and badges take care of themselves. Don\'t expect the scale to move for the first 2–3 weeks; the habits come first.</div>';
+  h+='<p class="center" style="margin-top:14px;font-size:13px"><a href="https://www.etsy.com/listing/4519902891" target="_blank" rel="noopener" style="color:var(--sageink);font-weight:600;text-decoration:none">📒 Get the full printable planner on Etsy →</a></p>';
   return h;
 }
 
@@ -307,6 +308,7 @@ function renderResults(){
   h+='<div class="chips"><div class="chip"><b>'+c.budget.toLocaleString()+'</b><span>cal budget</span></div><div class="chip"><b>'+c.protein+'</b><span>g protein</span></div></div>';
   h+='<div class="macros">Macros: <b>'+c.protein+'g</b> protein · <b>'+c.carbs+'g</b> carbs · <b>'+c.fat+'g</b> fat <span style="color:var(--ink2)">— time carbs around your walks</span></div>';
   h+='<h2>Build a day of meals</h2><label class="veg-tog"><input type="checkbox" id="vegchk"'+(vegOnly?' checked':'')+'> Vegetarian options only</label><div id="tally"></div><div id="meals"></div>';
+  h+='<div class="card blush center" style="margin-top:18px"><div style="font-size:26px">📒</div><b style="font-size:16px;color:var(--sageink);display:block;margin:5px 0 4px">Want it all on paper?</b><span class="mini">Get the full <b>No-Crunch Crash Plan</b> — a 13-page guide + 20-page fillable planner (weigh-ins, habit streaks, a 12-week trend, meals &amp; more) to track everything you just set up.</span><a class="btn" href="https://www.etsy.com/listing/4519902891" target="_blank" rel="noopener" style="display:block;box-sizing:border-box;text-align:center;text-decoration:none;margin-top:12px">Get the printable planner on Etsy →</a></div>';
   el.innerHTML=h;
   bindTierMeal();renderMeals();
 }
